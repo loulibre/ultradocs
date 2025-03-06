@@ -1,0 +1,53 @@
+{
+  "name": "ultradocs",
+  "version": "1.0.0",
+  "description": "UltraDocs is a Hugo theme for documentation websites with enhanced knowledge graph capabilities",
+  "config": {
+    "HUGO_BIN": "hugo",
+    "HUGO_PORT": 1888,
+    "TEST_BASE_URL": "http://localhost:1888/",
+    "TEST_BIND_URL": "http://127.0.0.1:1888/"
+  },
+  "scripts": {
+    "start": "hugo server -D",
+    "build": "hugo",
+    "clean": "rm -rf public resources",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "format:check": "prettier --check .",
+    "format:write": "prettier --write .",
+    "cypress:info": "cypress info",
+    "cypress:open": "cypress open",
+    "cypress:run": "cypress run",
+    "cy:open": "cross-env-shell TEST_BIND_URL=${npm_package_config_TEST_BIND_URL} \"start-server-and-test ${TEST_BIND_URL} cypress:open\"",
+    "cy:run": "cross-env-shell TEST_BIND_URL=${npm_package_config_TEST_BIND_URL} \"start-server-and-test ${TEST_BIND_URL} cypress:run\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/loulibre/ultradocs.git"
+  },
+  "keywords": [
+    "hugo",
+    "theme",
+    "documentation",
+    "knowledge-graph",
+    "ai-readable"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/loulibre/ultradocs/issues"
+  },
+  "homepage": "https://github.com/loulibre/ultradocs#readme",
+  "devDependencies": {
+    "autoprefixer": "^10.4.14",
+    "postcss": "^8.4.24",
+    "postcss-cli": "^10.1.0",
+    "bmyc": "^0.5.8",
+    "cross-env": "^7.0.3",
+    "cypress": "^13.13.3",
+    "prettier": "^3.3.3",
+    "prettier-plugin-go-template": "^0.0.15",
+    "start-server-and-test": "^2.0.5"
+  },
+  "dependencies": {}
+}
